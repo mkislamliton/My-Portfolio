@@ -4,280 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md. Khadimul Islam Liton - Portfolio</title>
-    <!-- Font Awesome for Social & Contact Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .portfolio-card {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 20px;
-            max-width: 900px;
-            width: 100%;
-            padding: 40px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-        }
-
-        .profile-header {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-            padding-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .profile-info h1 {
-            font-size: 2.2rem;
-            color: #1e293b;
-            margin-bottom: 5px;
-        }
-
-        .profile-info h3 {
-            font-size: 1.1rem;
-            color: #2563eb;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .profile-info p {
-            color: #475569;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background-color: #2563eb;
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            background-color: #1d4ed8;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background-color: #059669;
-            color: #fff;
-        }
-
-        .btn-secondary:hover {
-            background-color: #047857;
-            transform: translateY(-2px);
-        }
-
-        .content-section {
-            margin-top: 30px;
-        }
-
-        .section-title {
-            font-size: 1.3rem;
-            color: #1e293b;
-            margin-bottom: 15px;
-            position: relative;
-            padding-bottom: 5px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: #2563eb;
-            border-radius: 2px;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .contact-card {
-            background: rgba(255, 255, 255, 0.6);
-            padding: 20px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-decoration: none;
-            color: #333;
-            transition: transform 0.3s ease, background 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.8);
-        }
-
-        .contact-card:hover {
-            transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.9);
-        }
-
-        .contact-icon {
-            width: 45px;
-            height: 45px;
-            border-radius: 10px;
-            background: #e0e7ff;
-            color: #2563eb;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #1e293b;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-icon:hover {
-            background: #2563eb;
-            transform: scale(1.1);
-        }
-
-        @media (max-width: 600px) {
-            .profile-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            .btn-group {
-                justify-content: center;
-            }
-            .section-title::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background-color: #f4f6f9; color: #333; }
+        .container { max-width: 900px; margin: auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .profile-header { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; }
+        .profile-img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 4px solid #2563eb; }
+        h1 { margin: 10px 0 5px 0; color: #1e293b; }
+        h3 { margin: 0; color: #2563eb; font-weight: 600; }
+        .btn-container { margin-top: 20px; }
+        .btn { display: inline-block; padding: 10px 20px; color: white; background-color: #2563eb; border-radius: 5px; text-decoration: none; margin: 5px; font-weight: bold; }
+        .btn-green { background-color: #059669; }
+        .section { margin-top: 30px; }
+        .section-title { font-size: 1.2rem; color: #1e293b; border-bottom: 2px solid #2563eb; display: inline-block; padding-bottom: 5px; margin-bottom: 15px; }
+        ul { line-height: 1.6; }
+        .contact-box { background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 15px; }
     </style>
 </head>
 <body>
 
-    <div class="portfolio-card">
-        <!-- Header Section -->
-        <header class="profile-header">
-            <!-- Profile Photo -->
-            <img src="profile.jpg" alt="Md. Khadimul Islam Liton" class="profile-img">
-            
-            <div class="profile-info">
-                <h1>Md. Khadimul Islam Liton</h1>
-                <h3>Senior Quality Assurance Professional</h3>
-                <p>Apparel Manufacturing & Quality Assurance Expert with extensive experience in audit compliance, defect root-cause analysis, and pre-production management.</p>
-                
-                <!-- Resume & Cover Letter Download Buttons -->
-                <div class="btn-group">
-                    <a href="resume.pdf" download class="btn btn-primary">
-                        <i class="fa-solid fa-file-arrow-down"></i> Download Resume
-                    </a>
-                    <a href="cover-letter.pdf" download class="btn btn-secondary">
-                        <i class="fa-solid fa-envelope-open-text"></i> Download Cover Letter
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <!-- Contact & Social Details Section -->
-        <main class="content-section">
-            <h2 class="section-title">Get In Touch</h2>
-            
-            <div class="contact-grid">
-                <!-- Direct WhatsApp Link -->
-                <a href="https://wa.me/8801836391175" target="_blank" class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <div>
-                        <small style="color: #64748b;">WhatsApp / Call</small>
-                        <div style="font-weight: 600;">+880 1836391175</div>
-                    </div>
-                </a>
-
-                <!-- Direct Email Link -->
-                <a href="mailto:mkislamliton@gmail.com" class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <div>
-                        <small style="color: #64748b;">Email Me</small>
-                        <div style="font-weight: 600;">mkislamliton@gmail.com</div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Social Links -->
-            <div class="social-links">
-                <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-            </div>
-        </main>
+<div class="container">
+    <div class="profile-header">
+        <!-- ছবির ফাইল নেম সঠিকভাবে মিলিয়ে নিন -->
+        <img src="profile.jpg" alt="Md. Khadimul Islam Liton" class="profile-img">
+        <h1>Md. Khadimul Islam Liton</h1>
+        <h3>Senior Quality Assurance Professional</h3>
+        <p>Apparel Manufacturing & Quality Assurance Expert with extensive experience in audit compliance, defect root-cause analysis, and pre-production management.</p>
+        
+        <div class="btn-container">
+            <a href="resume.pdf" class="btn" download>Download Resume</a>
+            <a href="cover-letter.pdf" class="btn btn-green" download>Download Cover Letter</a>
+        </div>
     </div>
+
+    <!-- Career Summary -->
+    <div class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p>Dynamic Quality Assurance Senior Specialist with proven track record in garment inspection, 5S audit implementation, and leading technical pre-production meetings to ensure zero-defect shipment goals.</p>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+        <h2 class="section-title">Work Experience</h2>
+        <h4>Senior Quality Assurance | Synergies Sourcing Bangladesh Ltd.</h4>
+        <ul>
+            <li>Conducting inline, pre-final, and final inspections according to buyer AQL standards.</li>
+            <li>Root cause analysis for sewing and fabric defects and implementing corrective action plans (CAP).</li>
+            <li>Overseeing factory 5S compliance and quality control audits.</li>
+        </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="section">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-box">
+            <p><strong>Phone / WhatsApp:</strong> +880 1836391175</p>
+            <p><strong>Email:</strong> mkislamliton@gmail.com</p>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
